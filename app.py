@@ -20,7 +20,7 @@ user_score = 0
 computer_score = 0
 
 #write welcome message to console
-print("Welcome to Rock, Paper, Scissors!")
+print("Hello Quinn! \n Welcome to Rock, Paper, Scissors!")
 
 #write rules to console
 print("Rules:")
@@ -36,14 +36,14 @@ play_again = input("Would you like to play? (y/n): ")
 
 while play_again.lower() != "n":
     #set user selection variable
-    user_selection = input("Enter Rock, Paper, or Scissors: ")
+    user_selection = input("\nEnter Rock, Paper, or Scissors: ")
     #convert user selection to lowercase
     user_selection = user_selection.lower()
 
     #validate user_selection   
     while user_selection != "rock" and user_selection != "paper" and user_selection != "scissors":
 
-        print("You did not select Rock, Paper, or Scissors. Please try again.")
+        print("You did not select Rock, Paper, or Scissors. Please try again.\n")
         user_selection = input("Enter Rock, Paper, or Scissors: ")
         #convert user selection to lowercase
         user_selection = user_selection.lower()
@@ -64,7 +64,7 @@ while play_again.lower() != "n":
     #end if
 
     #print "you selected" and user selection
-    print("You selected " + user_selection)
+    print("Quinn selected " + user_selection)
 
     #print "computer selected" and computer selection
     print("Computer selected " + computer_selection)
@@ -98,21 +98,18 @@ while play_again.lower() != "n":
         user_score = user_score + 1
     #end if
 
-    #write carriage return to console
-    print("")
-
     #ask user to play again?
-    play_again = input("Would you like to play again? (y/n): ")
+    play_again = input("\nWould you like to play again? (y/n): ")
 
 #write user score to console
-print("Your score: " + str(user_score))
+print("Quinn's score: " + str(user_score))
 
 #write computer score to console
 print("Computer score: " + str(computer_score))
 
 #if user_score + computer_score > 0 then write proportion of user wins to console
 if user_score + computer_score > 0:
-    print("Proportion of user wins: " + str(user_score / (user_score + computer_score)))   
+    print("Win %: " + str(user_score / (user_score + computer_score)*100) + "%")   
 
 #write goodbye message to console
 print("Thanks for playing!")
